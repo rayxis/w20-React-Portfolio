@@ -1,0 +1,11 @@
+.menu {
+	&__link {
+		&--active {}
+	}
+	&__list {
+		display:    flex;
+		flex-flow:  row nowrap;
+		list-style: none;
+	}
+	&__item {}
+}

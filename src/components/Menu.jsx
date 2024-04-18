@@ -1,13 +1,15 @@
-import { menu } from '../data/config';
-import { Link } from 'react-router-dom';
+import { menuItems } from '../routes';
+import { NavLink } from 'react-router-dom';
 
 export default function Menu() {
 	return (
-		<nav className="nav">
-			<ul>
-				{menu.map((item) => (
-					<li key={item.id}>
-						<Link to={item.link}>{item.title}</Link>
+		<nav className="menu">
+			<ul className="menu__list">
+				{/* Loop through the menu items and format them as list items with links */}
+				{menuItems.map((item, index) => (
+					<li key={index} className="menu__item">
+						<NavLink to={item.path}
+						         className={({ isActive }) => `link menu__link ${isActive ? 'menu__link--active' : ''}`}>{item.title}</NavLink>
 					</li>
 				))}
 			</ul>
