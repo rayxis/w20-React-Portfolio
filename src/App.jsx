@@ -1,17 +1,23 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Menu from './components/Menu';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { menuItems } from './routes';
+import { Header } from './components';
+import { About, Contact, NotFound, Portfolio, Resume } from './pages';
+// Load CSS
+import './assets/styles/main.scss';
 
-function App() {
+export default function App() {
 	return (
 		<Router>
-			<Menu/>
+			<Header/>
 
-			<Switch>
-
-			</Switch>
+			<main>
+				<Routes>
+					{menuItems.map(({ path, page: Page }) => (
+						<Route key={path} path={path} element={<Page />}/>
+					))}
+					<Route path="*" element={<NotFound />}/>
+				</Routes>
+			</main>
 		</Router>
 	);
 }
-
-export default App;
