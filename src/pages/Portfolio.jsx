@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet';
+// Load CSS
+import '../assets/styles/portfolio.scss';
 
 export default function Portfolio() {
 	return (

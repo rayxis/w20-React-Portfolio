@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet';
+// Load CSS
+import '../assets/styles/resume.scss';
 
 export default function Resume() {
 	return (

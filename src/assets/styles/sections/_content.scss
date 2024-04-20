@@ -1,0 +1,12 @@
+@use "../values" as x; // Predefined values and settings
+
+$header-height: x.$header-height;
+
+body {
+	font-size: 88%;
+}
+
+.link {
+	color: map-get(x.$colors, "header-link");
+	text-decoration: none;
+}

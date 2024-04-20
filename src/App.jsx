@@ -1,23 +1,29 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { menuItems } from './routes';
-import { Header } from './components';
+import { Footer, Header } from './components';
 import { About, Contact, NotFound, Portfolio, Resume } from './pages';
 // Load CSS
 import './assets/styles/main.scss';
+import { Helmet } from 'react-helmet';
 
 export default function App() {
 	return (
 		<Router>
+			<Helmet defaultTitle="Home"
+			        titleTemplate="%s | Ray Beliveau"/>
 			<Header/>
 
 			<main>
 				<Routes>
 					{menuItems.map(({ path, page: Page }) => (
-						<Route key={path} path={path} element={<Page />}/>
+						<Route key={path} path={path} element={<Page/>}/>
 					))}
-					<Route path="*" element={<NotFound />}/>
+					<Route path="/" element={<About/>}/>
+					<Route path="*" element={<NotFound/>}/>
 				</Routes>
 			</main>
+
+			<Footer/>
 		</Router>
 	);
 }

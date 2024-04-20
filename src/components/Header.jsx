@@ -3,9 +3,7 @@ import { Menu } from '.';
 
 export default function Header() {
 	return (
-		<header>
-			<Helmet defaultTitle="Home"
-			        titleTemplate="%s | Ray Beliveau"/>
+		<header className="page-header">
 			<Menu/>
 		</header>
 	);

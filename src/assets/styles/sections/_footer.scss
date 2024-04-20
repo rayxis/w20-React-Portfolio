@@ -1,0 +1,7 @@
+@use "../values" as x; // Predefined values and settings
+
+.page-footer {
+	height: 100px;
+
+	background-color: map-get(x.$colors, "header-bg");
+}

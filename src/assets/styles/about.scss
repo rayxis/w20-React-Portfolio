@@ -1,0 +1,35 @@
+@use "values" as x; // Predefined values and settings
+
+.about {
+	background-image:      url("/public/BlueBonnets2x1.jpg");
+	background-attachment: fixed;
+	background-position:   center x.$header-height;
+	background-repeat:     no-repeat;
+	background-size:       contain;
+
+	&__overlay {
+		height: calc(100vw / 2);
+	}
+
+	&__content {
+		display:     flex;
+		flex-flow:   column nowrap;
+		align-items: center;
+		padding:     map-get(x.$sizes, "xlarge") 10%;
+
+		background-color:      white;
+
+		&__header {
+			//padding:   map-get(x.$sizes, "large");
+			margin-bottom: map-get(x.$sizes, "large");
+			font-size:     map-get(x.$font-sizes, "medium-large");
+		}
+
+		&__text {
+			padding:   map-get(x.$sizes, "medium");
+			width:     100%;
+			font-size: map-get(x.$font-sizes, "medium");
+		}
+
+	}
+}

@@ -1,0 +1,36 @@
+@use "../values" as x; // Predefined values and settings
+
+.page-header {
+	display:          flex;
+	align-items:      center;
+	justify-content:  center;
+	gap:              map-get(x.$sizes, "medium-large");
+	position:         fixed;
+	top:              0;
+	z-index:          1;
+	width:            100%;
+	height:           x.$header-height;
+	padding:          map-get(x.$sizes, "medium");
+
+	background-color: map-get(x.$colors, "header-bg");
+	font-family:      x.$font-main;
+	font-size:        map-get(x.$font-sizes, "medium-small");
+}
+
+.menu {
+	&__link {
+		&--active {
+			color: map-get(x.$colors, "header-link-active");
+		}
+	}
+
+	&__list {
+		display:    flex;
+		flex-flow:  row nowrap;
+		list-style: none;
+	}
+
+	&__item {
+		padding: 5px;
+	}
+}
