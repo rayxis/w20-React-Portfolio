@@ -13,15 +13,13 @@ export default function App() {
 			        titleTemplate="%s | Ray Beliveau"/>
 			<Header/>
 
-			<main>
-				<Routes>
-					{menuItems.map(({ path, page: Page }) => (
-						<Route key={path} path={path} element={<Page/>}/>
-					))}
-					<Route path="/" element={<About/>}/>
-					<Route path="*" element={<NotFound/>}/>
-				</Routes>
-			</main>
+			<Routes>
+				{menuItems.map(({ path, page: Page }) => (
+					<Route key={path} path={path} element={<Page/>}/>
+				))}
+				<Route path="/" element={<About/>}/>
+				<Route path="*" element={<NotFound/>}/>
+			</Routes>
 
 			<Footer/>
 		</Router>

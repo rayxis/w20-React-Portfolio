@@ -1,0 +1,29 @@
+@use "values" as x; // Predefined values and settings
+
+.contact {
+	display:   flex;
+	flex-flow: column nowrap;
+
+	&__form {
+		display:          flex;
+		flex-flow:        column nowrap;
+		gap:              map-get(x.$sizes, "medium-large");
+		padding:          map-get(x.$sizes, "medium");
+		width:            500px;
+
+		background-color: white;
+
+		&--group {
+			display: flex;
+			padding: map-get(x.$sizes, "medium");
+		}
+	}
+
+	&__label {
+		padding: map-get(x.$sizes, "medium") map-get(x.$sizes, "medium") map-get(x.$sizes, "medium") 0;
+	}
+
+	&__textarea {
+		width: 100%;
+	}
+}
