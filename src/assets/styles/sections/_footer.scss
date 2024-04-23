@@ -1,7 +1,13 @@
 @use "../values" as x; // Predefined values and settings
 
 .page-footer {
-	height: 100px;
+	display:          flex;
+	flex-flow:        column nowrap;
+	justify-content:  center;
+	align-items:      center;
+	height:           100px;
 
 	background-color: map-get(x.$colors, "header-bg");
+	color:            map-get(x.$colors, "footer-font");
+	font-size:        map-get(x.$font-sizes, "small");
 }

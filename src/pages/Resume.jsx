@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+ import { Helmet } from 'react-helmet';
 import { proficiencies, resumeLink } from '../data/resumeData.js';
 // Load CSS
 import '../assets/styles/resume.scss';
@@ -16,15 +16,15 @@ export default () => (
 			{Object.entries(proficiencies).map(([category, { title, items }]) => (
 				<div className="proficient__item" key={category}>
 					<h3 className="proficient__name">{title}</h3>
-					<ul>
+					<ul className="proficient__skills">
 						{items.map((skill, index) => <li key={index}>{skill}</li>)}
 					</ul>
 				</div>
 			))}
 		</section>
 
-		<section className="resume__section proficient">
-			<a href={resumeLink} target="_blank">Download my resume</a>
+		<section className="resume__section download">
+			<a className="link__fixme" href={resumeLink} target="_blank">Download my resume</a>
 		</section>
 	</main>
 );

@@ -1,9 +1,10 @@
 $colors:        (
 		                border: rgba(0, 0, 0, 0.1),
+						footer-font: white,
 		                header-bg: rgba(0, 0, 0, 0.9),
 		                header-font: white,
 		                header-link: white,
-		                header-link-active: darkslateblue,
+		                link-active: darkslateblue,
 		                shadow: rgba(0, 0, 0, 0.3)
                 );
 
@@ -49,3 +50,5 @@ $transitions:   ( // @formatter:off
 		                box-shadow: box-shadow .25s ease,
 		                text-shadow: text-shadow .25s ease
                 ); // @formatter:on
+
+$border: 1px solid map-get($colors, "border");

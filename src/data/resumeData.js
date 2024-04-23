@@ -15,7 +15,7 @@ export const proficiencies = {
 	},
 	tools: {
 		title: 'Tools',
-		items: ['GitHub'],
+		items: ['GitHub', 'PHPStorm', 'WebStorm', 'VSCode'],
 	},
 	webServersAndHosting: {
 		title: 'Web Servers & Hosting',
@@ -23,7 +23,7 @@ export const proficiencies = {
 	},
 	operatingSystems: {
 		title: 'Operating Systems',
-		items: ['Linux'],
+		items: ['Linux (RHEL-variants: CentOS, Alma, Rocky, Fedora; Ubuntu)', 'MacOS','Windeows'],
 	},
 	others: {
 		title: 'Other',

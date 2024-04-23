@@ -1,3 +1,31 @@
 @use "values" as x; // Predefined values and settings
 
-.resume {}
+.resume {
+	display: flex;
+	padding: map-get(x.$sizes, "xlarge");
+
+	&__section {
+		display: flex;
+		gap:     map-get(x.$sizes, "medium-large");
+		padding: map-get(x.$sizes, "medium");
+	}
+}
+
+.download {
+	align-items:     center;
+	justify-content: center;
+}
+
+.proficient {
+	display:   flex;
+	flex-flow: row wrap;
+
+	&__skills {
+		display:    flex;
+		flex-flow:  column wrap;
+		padding:    map-get(x.$sizes, "medium-large");
+		width:      300px;
+		list-style: none;
+		border:     x.$border;
+	}
+}

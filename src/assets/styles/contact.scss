@@ -1,8 +1,12 @@
 @use "values" as x; // Predefined values and settings
 
 .contact {
-	display:   flex;
-	flex-flow: column nowrap;
+	display:         flex;
+	flex-flow:       column nowrap;
+	align-items:     center;
+	justify-content: center;
+
+	padding:         map-get(x.$sizes, "xlarge");
 
 	&__form {
 		display:          flex;
